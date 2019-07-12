@@ -1,12 +1,13 @@
 provider "aws" {
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
+  #access_key = "${var.access_key}"
+  #secret_key = "${var.secret_key}"
   region = "${var.region}"
 }
 
 terraform {
    backend "s3" {
-   bucket = "rc-tf-remote-state-bucket"
+   bucket = "mk-tf-bucket-training-exersize-1"
+   key = "terraform.tfstate"
    region = "us-east-1"
   }
 }

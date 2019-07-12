@@ -24,10 +24,3 @@ variable "tag_env" {
   description = "Tag for Environment Name"
   default     = "training"
   }
-
-terraform {
-   backend "s3" {
-   bucket = "mk-tf-bucket-training-exersize-1"
-   key = "terraform.tfstate"
-   region = "us-east-1"
-  }
